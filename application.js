@@ -54,10 +54,15 @@ var addItem = function(name,cost) {
 }
 
 
- $(document).on('keyup', '.quantity', function(){
+$(document).on('keyup', '.quantity', function(){
    updateTotalPrice();
- });
+});
 
- $(document).on('click', '#add', function() {
+$(document).on('click', '#add', function() {
    addItem($('#name').val(), $('#cost').val());
- });
+});
+
+$(document).on('click', '.remove', function() {
+    $(this).parents('.row').remove();
+    sum();
+});
