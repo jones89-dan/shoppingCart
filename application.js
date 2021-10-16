@@ -64,5 +64,5 @@ $(document).on('click', '#add', function() {
 
 $(document).on('click', '.remove', function() {
     $(this).parents('.row').remove();
-    sum();
+    updateTotalPrice();
 });
